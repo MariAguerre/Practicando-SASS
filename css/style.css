@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; }
+
+/* GRID */
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 3fr 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas: "header main" "header footer"; }
+  #container #header {
+    grid-area: header;
+    background-color: #f9de1f; }
+    #container #header .img__Logo {
+      width: 100px;
+      display: block;
+      margin: auto;
+      padding-top: 10px; }
+    #container #header .img__SoyFlooori {
+      width: 150px;
+      display: block;
+      margin: auto; }
+      #container #header .img__SoyFlooori:hover {
+        animation-name: agrandado;
+        animation-duration: 2s; }
+      #container #header .img__SoyFlooori .titulos {
+        font-family: 'Fuzzy Bubbles', cursive;
+        padding: 2rem 0 0 2rem; }
+      #container #header .img__SoyFlooori .subtitulo {
+        font-size: 18px;
+        padding: 2rem 0 0 2rem; }
+    #container #header .respmenu .menuVertical {
+      margin-top: 3rem; }
+      #container #header .respmenu .menuVertical a {
+        color: black;
+        display: block;
+        text-align: center;
+        padding: 15px 0px 15px 0px;
+        text-decoration: none; }
+        #container #header .respmenu .menuVertical a:hover {
+          background-color: rosa;
+          cursor: pointer; }
+    #container #header #socialMedia {
+      height: 3rem;
+      bottom: 2rem;
+      text-align: center; }
+      #container #header #socialMedia .fab {
+        color: #a9d8e5;
+        margin: auto; }
+  #container #footer {
+    grid-area: footer;
+    height: 100px;
+    text-align: right;
+    font-size: 14px;
+    background-color: #a9d8e5; }
+  #container #mainIndex,
+  #container #mainCasaTaller,
+  #container #mainContacto {
+    grid-area: main;
+    background-image: url(../Img/img__bg--pink.png);
+    background-size: cover; }
+    #container #mainIndex .titulos,
+    #container #mainCasaTaller .titulos,
+    #container #mainContacto .titulos {
+      font-family: 'Fuzzy Bubbles', cursive;
+      padding: 2rem 0 0 2rem; }
+    #container #mainIndex .subtitulo,
+    #container #mainCasaTaller .subtitulo,
+    #container #mainContacto .subtitulo {
+      font-size: 18px;
+      padding: 2rem 0 0 2rem; }
+  #container #mainIlustraciones,
+  #container #mainSobreMi,
+  #container #mainTienda {
+    grid-area: main;
+    background-image: url(../Img/img__bg--sky.png);
+    background-size: cover; }
+    #container #mainIlustraciones .titulos,
+    #container #mainSobreMi .titulos,
+    #container #mainTienda .titulos {
+      font-family: 'Fuzzy Bubbles', cursive;
+      padding: 2rem 0 0 2rem; }
+    #container #mainIlustraciones .subtitulo,
+    #container #mainSobreMi .subtitulo,
+    #container #mainTienda .subtitulo {
+      font-size: 18px;
+      padding: 2rem 0 0 2rem; }
+
+@keyframes agrandado {
+  0% {
+    width: 200px; } }
+
+/* Index */
+.contMenu {
+  padding: 100px 50px 0px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "sobreMi sobreMi sobreMi ilustraciones ilustraciones ilustraciones" "contacto contacto tienda tienda casaTaller casaTaller"; }
+  .contMenu .imgMenu {
+    display: flex;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    text-decoration: none; }
+    .contMenu .imgMenu .txtIndex {
+      color: black; }
+  .contMenu .imgSobreMi {
+    background-image: url(../Img/sobreMi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: sobreMi; }
+  .contMenu .imgSobreMi:hover {
+    background-image: url(../Img/imgsobreMiHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .contMenu .imgIlustraciones {
+    background-image: url(../Img/ilustraciones.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: ilustraciones; }
+  .contMenu .imgIlustraciones:hover {
+    background-image: url(../Img/ilustracionesHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .contMenu .imgTienda {
+    background-image: url(../Img/store.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: tienda; }
+  .contMenu .imgTienda:hover {
+    background-image: url(../Img/storeHover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .contMenu .imgContacto {
+    background-image: url(../Img/img__casaTaller.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: contacto; }
+  .contMenu .imgCasaTaller {
+    background-image: url(../Img/Img__Contacto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: casaTaller; }
+
+/* Fin INDEX */
+/* SOBRE MI */
+#contenidoSobreMi {
+  background-color: #e6a2bb;
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 1rem;
+  padding: 20px;
+  text-align: center; }
+  #contenidoSobreMi #contenidoSobreMi p {
+    margin: 1rem; }
+
+/* Fin Sobre Mi */
+/* Casa Taller */
+#table {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+  background-color: #86bece;
+  border-collapse: collapse; }
+  #table th,
+  #table td {
+    border: solid 5px #e6a2bb;
+    padding: 3px; }
+    #table th li,
+    #table td li {
+      list-style-type: none; }
+  #table th {
+    background-color: #f9de1f;
+    font-family: 'Fuzzy Bubbles', cursive; }
+  #table tr:hover {
+    background-color: #e6a2bb; }
+
+/* Fin Casa Taller */
+/* Contacto */
+form {
+  text-align: center; }
+
+.formularioContacto {
+  width: 50%;
+  margin: 3rem auto;
+  padding: 1.5rem 1rem;
+  background-color: #e6a2bb;
+  border-radius: 0.5rem; }
+  .formularioContacto .formContacto {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    color: #000000;
+    font-weight: 600; }
+  .formularioContacto .formInput,
+  .formularioContacto .formTextArea {
+    width: 60%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #a9d8e5;
+    border: none;
+    color: #000000;
+    font-size: 1rem; }
+    .formularioContacto .formInput:focus,
+    .formularioContacto .formTextArea:focus {
+      outline: none; }
+  .formularioContacto .formTextArea {
+    height: 5rem;
+    resize: none; }
+  .formularioContacto .formInputSubmit {
+    background-color: #a9d8e5;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    border-bottom: none;
+    font-weight: 700;
+    cursor: pointer; }
+    .formularioContacto .formInputSubmit:hover {
+      background-color: #f9de1f; }
+
+/* Fin contacto */
+/* Tienda Online */
+#contTienda {
+  padding: 30px 0px 0px 30px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: "header" "main" "footer"; }
+    #container .fab {
+      visibility: hidden; }
+  .contMenu {
+    justify-content: center; }
+    .contMenu .imgMenu {
+      width: 150px;
+      height: 150px;
+      text-decoration: none; }
+    .contMenu .txtIndex {
+      font-size: 12px; }
+    .contMenu #mainIndex,
+    .contMenu #mainCasaTaller,
+    .contMenu #mainContacto,
+    .contMenu #mainIlustraciones,
+    .contMenu #mainSobreMi,
+    .contMenu #mainTienda {
+      height: auto; }
+  #contenidoSobreMi p {
+    font-size: 12px; }
+  .respmenu input[type="checkbox"],
+  .respmenu .fa-bars,
+  .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0; }
+  .respmenu .fa-bars,
+  .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none; }
+  .respmenu input[type="checkbox"] {
+    opacity: 0; }
+  .respmenu {
+    color: #e6a2bb;
+    position: relative;
+    background: #f9de1f;
+    display: flex;
+    justify-content: center; }
+  .respmenu nav {
+    display: none; }
+  .respmenu input:checked ~ nav {
+    display: block; }
+  .respmenu input:checked ~ .fa-bars {
+    display: none; }
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none; } }
