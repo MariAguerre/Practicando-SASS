@@ -1,5 +1,6 @@
-@import './utilidades/fonts';
-@import './utilidades/colores';
+@import './utilidades/_fonts';
+@import './utilidades/_colores';
+@import './secciones/_header';
 
 
 * {
@@ -18,70 +19,68 @@
     grid-template-areas:
         "header main"
         "header footer";
-
-    #header {
-        grid-area: header;
-        background-color: $amarillo;
-
-        .img__Logo {
-            width: 100px;
-            display: block;
-            margin: auto;
-            padding-top: 10px;
-        }
-
-        .img__SoyFlooori {
-            width: 150px;
-            display: block;
-            margin: auto;
-
-            &:hover {
-                animation-name: agrandado;
-                animation-duration: 2s;
+        #header {
+            grid-area: header;
+            background-color: $amarillo;
+        
+            .img__Logo {
+                width: 100px;
+                display: block;
+                margin: auto;
+                padding-top: 10px;
             }
-
-            .titulos {
-                font-family: 'Fuzzy Bubbles', cursive;
-                padding: 2rem 0 0 2rem;
+        
+            .img__SoyFlooori {
+                width: 150px;
+                display: block;
+                margin: auto;
+        
+                &:hover {
+                    animation-name: agrandado;
+                    animation-duration: 2s;
+                }
+        
+                .titulos {
+                    font-family: 'Fuzzy Bubbles', cursive;
+                    padding: 2rem 0 0 2rem;
+                }
+        
+                .subtitulo {
+                    font-size: 18px;
+                    padding: 2rem 0 0 2rem;
+                }
             }
-
-            .subtitulo {
-                font-size: 18px;
-                padding: 2rem 0 0 2rem;
-            }
-        }
-
-        .respmenu {
-            .menuVertical {
-                margin-top: 3rem;
-
-                a {
-                    color: black;
-                    display: block;
-                    text-align: center;
-                    padding: 15px 0px 15px 0px;
-                    text-decoration: none;
-
-                    &:hover {
-                        background-color: rosa;
-                        cursor: pointer;
+        
+            .respmenu {
+                .menuVertical {
+                    margin-top: 3rem;
+        
+                    a {
+                        color: $negro;
+                        display: block;
+                        text-align: center;
+                        padding: 15px 0px 15px 0px;
+                        text-decoration: none;
+        
+                        &:hover {
+                            background-color: $rosa;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
-        }
-
-        #socialMedia {
-            height: 3rem;
-            bottom: 2rem;
-            text-align: center;
-
-            .fab {
-                color: $celeste;
-                margin: auto;
+        
+            #socialMedia {
+                height: 3rem;
+                bottom: 2rem;
+                text-align: center;
+        
+                .fab {
+                    color: $celeste;
+                    margin: auto;
+                }
             }
         }
-    }
-
     #footer {
         grid-area: footer;
         height: 100px;
@@ -99,7 +98,7 @@
         background-size: cover;
 
         .titulos {
-            font-family: 'Fuzzy Bubbles', cursive;
+            font-family: $fuzzy;
             padding: 2rem 0 0 2rem;
         }
 
